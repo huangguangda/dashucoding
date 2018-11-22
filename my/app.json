@@ -1,12 +1,52 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/me/me",
+    "pages/msg/msg",
+    "pages/talk/talk",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#30d1ff",
+    "navigationBarTitleText": "达叔与他的朋友们",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/bottomicon-01.png",
+        "selectedIconPath": "images/bottomicon-01-1.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "text": "消息",
+        "iconPath": "images/bottomicon-02.png",
+        "selectedIconPath": "images/bottomicon-02-1.png"
+      },
+      {
+        "pagePath": "pages/talk/talk",
+        "text": "聊聊",
+        "iconPath": "images/bottomicon-03.png",
+        "selectedIconPath": "images/bottomicon-03-1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/bottomicon-04.png",
+        "selectedIconPath": "images/bottomicon-04-1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }
