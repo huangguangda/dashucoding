@@ -9,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#30d1ff",
-    "navigationBarTitleText": "达叔与他的朋友们",
+    "navigationBarTitleText": "智教云",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -29,12 +29,6 @@
         "text": "消息",
         "iconPath": "images/bottomicon-02.png",
         "selectedIconPath": "images/bottomicon-02-1.png"
-      },
-      {
-        "pagePath": "pages/talk/talk",
-        "text": "聊聊",
-        "iconPath": "images/bottomicon-03.png",
-        "selectedIconPath": "images/bottomicon-03-1.png"
       },
       {
         "pagePath": "pages/me/me",
