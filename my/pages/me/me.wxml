@@ -1,2 +1,14 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="head">
+  <view class="head_item {{selected?'head_itemActive':''}}" bindtap="selected">个人</view>
+  <view class="ring"></view>
+  <view class="head_item {{selected1?'head_itemActive':''}}" bindtap='selected1'>设置</view>
+</view>
+<view class="main {{selected?'show':'hidden'}}">
+  <canvas canvas-id="ringCanvas" disable-scroll="true" class="canvas"></canvas>
+  <cover-view class='text'>
+   黄
+  </cover-view>
+</view>
+<view class="main {{selected1?'show':'hidden'}}">
+  <text>for sutdnet month attend</text>
+</view>
