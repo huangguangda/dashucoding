@@ -17,8 +17,8 @@ Page {
 }
 
 .on {
-  color: #5fdafe;
-  border-bottom: 5rpx solid #30d1ff;
+  color: #ca0c16;
+  border-bottom: 5rpx solid #ca0c16;
 }
 
 .swiper-box {

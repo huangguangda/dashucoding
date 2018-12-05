@@ -1,27 +1,24 @@
-<!-- 图片 -->
-<view>
-  <image src='/images/biao.jpg' style='width: 100%; height: 440rpx'></image>
-</view>
+<image src='/images/biao.jpg'></image>
 <view class="nav">
   <view bindtap='kq'>
     <view>
       <image src="/images/c.png"></image>
     </view>
-    <view>1</view>
+    <view>时间管理</view>
   </view>
 
   <view bindtap='qj'>
     <view>
       <image src="/images/b.png"></image>
     </view>
-    <view>2</view>
+    <view>备注任务</view>
   </view>
 
   <view bindtap='xw'>
     <view>
       <image src="/images/a.png"></image>
     </view>
-    <view>3</view>
+    <view>笑话新闻</view>
   </view>
 </view>
 
@@ -30,20 +27,20 @@
     <view>
       <image src="/images/d.png"></image>
     </view>
-    <view>4</view>
+    <view>游戏</view>
   </view>
 
   <view bindtap='cj'>
     <view>
       <image src="/images/cj.png"></image>
     </view>
-    <view>5</view>
+    <view>记录</view>
   </view>
 
   <view bindtap='fy'>
     <view>
       <image src="/images/fy.png"></image>
     </view>
-    <view>6</view>
+    <view>支付</view>
   </view>
 </view>
