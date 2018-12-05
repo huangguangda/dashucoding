@@ -1,8 +1,88 @@
-/* pages/wxcharts/wxcharts.wxss */
-.canvas {
-    width: 750rpx;
-    height: 500rpx;
+Page {
+  background-color: #f1f1f1;
 }
-.canvas2{
-  height: 400rpx;
-} 
+
+.swiper-tab {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #797979;
+}
+
+.on {
+  color: #5fdafe;
+  border-bottom: 5rpx solid #30d1ff;
+}
+
+/* 下方 */
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 1 */
+
+.content {
+  font-size: 30rpx;
+  padding-top: 30rpx;
+  margin-left: 80rpx;
+}
+
+.date {
+  font-size: 25rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  margin-left: 80rpx;
+  color: #cacaca;
+}
+
+.region {
+  margin: 80rpx 50rpx 0rpx 50rpx;
+  height: 300rpx;
+  background-color: #fff;
+  border: 2rpx dotted #ccc;
+  border-radius: 15rpx;
+}
+
+.hr {
+  margin-top: 15rpx;
+  border: 2rpx solid #ccc;
+  opacity: 0.3;
+}
+
+.bottom {
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  font-size: 35rpx;
+  color: #3ad2fe;
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  height: 540rpx;
+}
+
+.dd {
+  box-sizing: border-box;
+  margin-bottom: 200rpx;
+  margin-top: -95rpx;
+}
+
+.yidu {
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  font-size: 35rpx;
+  text-align: center;
+  color: #ccc;
+}

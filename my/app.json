@@ -1,20 +1,20 @@
 {
   "pages": [
+    "pages/msg/msg",    
     "pages/me/me",    
     "pages/index/index",
-    "pages/msg/msg",
     "pages/talk/talk",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#30d1ff",
+    "navigationBarBackgroundColor": "#ca0c16",
     "navigationBarTitleText": "达叔和他的朋友们",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#ddd",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#30d1ff",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [
