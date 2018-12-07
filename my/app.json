@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/index/index",    
-    "pages/msg/msg",    
-    "pages/me/me",    
+    "pages/index/index",
+    "pages/msg/msg",
+    "pages/me/me",
     "pages/talk/talk",
+    "pages/jl/jl",
+    "pages/wz/wz",
     "pages/logs/logs"
   ],
   "window": {

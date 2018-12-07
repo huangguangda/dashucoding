@@ -6,6 +6,16 @@ Page({
   data: {
     
   },
+  jl: function(){
+    wx.navigateTo({
+      url: '../jl/jl',
+    })
+  },
+  wz: function(){
+    wx.navigateTo({
+      url: '../wz/wz',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

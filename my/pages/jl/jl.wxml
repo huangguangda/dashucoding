@@ -1,0 +1,26 @@
+<!--pages/jl/jl.wxml-->
+<view class="page">
+  <view class="section">
+    <view class="section__title">标题</view>
+    <input bindinput="bindTitleInput" placeholder="内容" value="{{title}}" />
+  </view>
+  <view class="section">
+    <view class="section__title">类型</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio">
+        <radio class="radio" value="income" checked="true" />收入
+      </label>
+      <label class="radio">
+        <radio class="radio" value="cost" />支出
+      </label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="section__title">金额</view>
+    <input bindinput="bindAccountInput" type="number" placeholder="请输入数字，不加正负号" />
+  </view>
+  <button class="button" type="primary">添加</button>
+  <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="hideAlertView">
+    <view>添加成功</view>
+  </modal>
+</view>

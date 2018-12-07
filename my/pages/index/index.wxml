@@ -1,43 +1,43 @@
 <image src='/images/biao.jpg'></image>
 <view class="nav">
-  <view bindtap='kq'>
+  <view bindtap='sjql'>
     <view>
       <image src="/images/c.png"></image>
     </view>
     <view>时间管理</view>
   </view>
 
-  <view bindtap='qj'>
+  <view bindtap='bzrw'>
     <view>
       <image src="/images/b.png"></image>
     </view>
     <view>备注任务</view>
   </view>
 
-  <view bindtap='xw'>
+  <view bindtap='wz'>
     <view>
       <image src="/images/a.png"></image>
     </view>
-    <view>笑话新闻</view>
+    <view>文章</view>
   </view>
 </view>
 
 <view class="nav">
-  <view bindtap='kb'>
+  <view bindtap='yx'>
     <view>
       <image src="/images/d.png"></image>
     </view>
     <view>游戏</view>
   </view>
 
-  <view bindtap='cj'>
+  <view bindtap='jl'>
     <view>
       <image src="/images/cj.png"></image>
     </view>
     <view>记录</view>
   </view>
 
-  <view bindtap='fy'>
+  <view bindtap='zl'>
     <view>
       <image src="/images/fy.png"></image>
     </view>
