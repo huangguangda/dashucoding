@@ -1,26 +1,12 @@
-<!--pages/jl/jl.wxml-->
-<view class="page">
-  <view class="section">
-    <view class="section__title">标题</view>
-    <input bindinput="bindTitleInput" placeholder="内容" value="{{title}}" />
-  </view>
-  <view class="section">
-    <view class="section__title">类型</view>
-    <radio-group class="radio-group" bindchange="radioChange">
-      <label class="radio">
-        <radio class="radio" value="income" checked="true" />收入
-      </label>
-      <label class="radio">
-        <radio class="radio" value="cost" />支出
-      </label>
-    </radio-group>
-  </view>
-  <view class="section">
-    <view class="section__title">金额</view>
-    <input bindinput="bindAccountInput" type="number" placeholder="请输入数字，不加正负号" />
-  </view>
-  <button class="button" type="primary">添加</button>
-  <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="hideAlertView">
-    <view>添加成功</view>
-  </modal>
+<view   bindtouchstart="touchStart" bindtouchend="touchEnd">
+
+  <view class='box1' style='width: {{ sysW * 7 }}px'><span bindtap="last">上</span><span bindtap="next">下</span>
+      <view class='dateBox' >{{ year }} - {{ month}}</view>
+      <block wx:for='{{ weekArr }}'>
+        <view style='width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;'>{{ item }}</view>
+      </block>
+      <block wx:for='{{ arr }}'>
+        <view style='width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;' class='{{ item ==  getDate ? "dateOn" : ""}} {{font==1?item>7?"font-color":"":font==2?item<7?"font-color":"":"" }}'>{{ item }}</view>
+      </block>
+  </view>
 </view>
