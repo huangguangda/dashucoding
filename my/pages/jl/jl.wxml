@@ -1,12 +1,181 @@
-<view   bindtouchstart="touchStart" bindtouchend="touchEnd">
+<image src='{{image}}' class='img'></image>
+<view class='bj'>{{bj}} {{name}}</view>
+<view class="container">
+  <view class="tr">
+    <view class="trd th1">
+      <image src='/images/title01.png'></image>
+    </view>
+    <view class="trd th2">
+      <image src='/images/title02.png'></image>
+    </view>
+    <view class="trd th3">
+      <image src='/images/title03.png'></image>
+    </view>
+    <view class="trd th4">
+      <image src='/images/title04.png'></image>
+    </view>
+    <view class="trd th5">
+      <image src='/images/title05.png'></image>
+    </view>
+    <view class="trd th6">
+      <image src='/images/title06.png'></image>
+    </view>
+  </view>
 
-  <view class='box1' style='width: {{ sysW * 7 }}px'><span bindtap="last">上</span><span bindtap="next">下</span>
-      <view class='dateBox' >{{ year }} - {{ month}}</view>
-      <block wx:for='{{ weekArr }}'>
-        <view style='width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;'>{{ item }}</view>
-      </block>
-      <block wx:for='{{ arr }}'>
-        <view style='width: {{ sysW }}px; height: {{ sysW }}px; line-height: {{ sysW }}px;' class='{{ item ==  getDate ? "dateOn" : ""}} {{font==1?item>7?"font-color":"":font==2?item<7?"font-color":"":"" }}'>{{ item }}</view>
-      </block>
-  </view>
+  <view class="tr">
+    <view class="trd th1">
+      8:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      9:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      10:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      11:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+
+  <view class="tr">
+    <view class="trdwuxiu th1wuxiu">
+      12:00
+      <text class='wuxiu'>午休</text>
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      14:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      15:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+  <view class="tr">
+    <view class="trd th1">
+      16:00
+    </view>
+    <view class="trd th2">
+      语文
+    </view>
+    <view class="trd th3">
+      语文
+    </view>
+    <view class="trd th4">
+      数学
+    </view>
+    <view class="trd th5">
+      数学
+    </view>
+    <view class="trd th6">
+      语文
+    </view>
+  </view>
+
+
 </view>
