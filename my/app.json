@@ -1,17 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/msg/msg",
-    "pages/me/me",
-    "pages/talk/talk",
-    "pages/jl/jl",
-    "pages/wz/wz",
-    "pages/logs/logs"
+    "pages/detail/detail",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ca0c16",
-    "navigationBarTitleText": "达叔和他的朋友们",
+    "navigationBarTitleText": "达叔与他的朋友们",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -27,12 +23,6 @@
         "selectedIconPath": "images/bottomicon-01-1.png"
       },
       {
-        "pagePath": "pages/msg/msg",
-        "text": "消息",
-        "iconPath": "images/bottomicon-02.png",
-        "selectedIconPath": "images/bottomicon-02-1.png"
-      },
-      {
         "pagePath": "pages/me/me",
         "text": "我的",
         "iconPath": "images/bottomicon-04.png",
@@ -44,5 +34,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

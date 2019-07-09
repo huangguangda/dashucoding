@@ -1,46 +1,35 @@
-<image src='/images/biao.jpg'></image>
-<view class="nav">
-  <view bindtap='sjql'>
-    <view>
-      <image src="/images/c.png"></image>
-    </view>
-    <view>时间管理</view>
-  </view>
+<view class="container">
+  <swiper class="images-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
+    <block wx:for="{{imgUrls}}" wx:key='*this'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" id='{{item.target}}'/>
+        <view class="sign">{{currentIndex+1}} / {{imgUrls.length}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
 
-  <view bindtap='bzrw'>
-    <view>
-      <image src="/images/b.png"></image>
-    </view>
-    <view>备注任务</view>
+  <view class='menuTab'>
+    <view class='menuLis {{actIndex=="first"?"actColor":""}}' id='first' bindtap="changeMenu">介绍</view>
+    <view class='menuLis {{actIndex=="second"?"actColor":""}}' id='second' bindtap="changeMenu">前端</view>
+    <view class='menuLis {{actIndex=="third"?"actColor":""}}' id='third' bindtap="changeMenu">小程序</view>
   </view>
-
-  <view bindtap='wz'>
-    <view>
-      <image src="/images/a.png"></image>
+  <scroll-view scroll-y style="flex:1;overflow:hidden;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class='leassonListOut' wx:for="{{leassonList}}" wx:key="{{item.id}}">
+      <view class='leassonList' data-id="{{item.id}}" bindtap="seeDetail">
+        <view class='listIn'>
+          <view class='leassonImg'>
+            <image src="{{item.imgUrl}}" class='leassonImgs' />
+          </view>
+          <view class='leassonTitle'>
+            <view class='title'>
+              {{item.title}}
+            </view>
+            <view class='author'>
+              作者：{{author}}
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
-    <view>文章</view>
-  </view>
-</view>
-
-<view class="nav">
-  <view bindtap='yx'>
-    <view>
-      <image src="/images/d.png"></image>
-    </view>
-    <view>游戏</view>
-  </view>
-
-  <view bindtap='jl'>
-    <view>
-      <image src="/images/cj.png"></image>
-    </view>
-    <view>记录</view>
-  </view>
-
-  <view bindtap='zl'>
-    <view>
-      <image src="/images/fy.png"></image>
-    </view>
-    <view>支付</view>
-  </view>
+  </scroll-view>
 </view>

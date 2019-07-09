@@ -1,75 +1,142 @@
+//引入本地json数据，这里引入的就是第一步定义的json数据
+var getData = require('../../data/data.js');
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    
+    imgUrls: [],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    toView: 'red',
+    scrollTop: 100,
+    author: 'Jeskson',
+    leassonList: [],
+    actIndex: 'first',
+    leassonId: '',
+    currentIndex: 0,
   },
-  jl: function(){
-    wx.navigateTo({
-      url: '../jl/jl',
+  bindchange: function (e) {
+    console.log('轮播图',e.detail)
+    this.setData({
+      currentIndex: e.detail.current
     })
   },
-  wz: function(){
-    wx.navigateTo({
-      url: '../wz/wz',
+  upper: function(e) {
+    console.log(e)
+  },
+  lower: function(e) {
+    console.log(e)
+  },
+  scroll: function(e) {
+    console.log(e)
+  },
+  tap: function(e) {
+    for (var i = 0; i < order.length; ++i) {
+      if (order[i] === this.data.toView) {
+        this.setData({
+          toView: order[i + 1]
+        })
+        break
+      }
+    }
+  },
+  tapMove: function(e) {
+    this.setData({
+      scrollTop: this.data.scrollTop + 10
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  // tab切换事件
+  changeMenu: function(e) {
+    this.setData({
+      actIndex: e.currentTarget.id
+    })
+    if (this.data.actIndex == 'first') {
+      var arr = []
+      for (var i = 0; i < getData.detailList.length; i++) {
+        console.log(getData.detailList[i].leassonType)
+        if (getData.detailList[i].leassonType == 1) {
+          arr.push({
+            id: getData.detailList[i].id,
+            imgUrl: getData.detailList[i].imgUrl,
+            title: getData.detailList[i].title,
+            leassonType: getData.detailList[i].leassonType,
+          })
+        }
+      }
+      this.setData({
+        leassonList: arr.reverse()
+      })
+    } else if (this.data.actIndex == 'second') {
+      var arr = []
+      for (var i = 0; i < getData.detailList.length; i++) {
+        console.log(getData.detailList[i].leassonType)
+        if (getData.detailList[i].leassonType == 2) {
+          arr.push({
+            id: getData.detailList[i].id,
+            imgUrl: getData.detailList[i].imgUrl,
+            title: getData.detailList[i].title,
+            leassonType: getData.detailList[i].leassonType,
+          })
+        }
+      }
+      this.setData({
+        leassonList: arr.reverse()
+      })
+    } else if (this.data.actIndex == 'third') {
+      var arr = []
+      for (var i = 0; i < getData.detailList.length; i++) {
+        console.log(getData.detailList[i].leassonType)
+        if (getData.detailList[i].leassonType == 3) {
+          arr.push({
+            id: getData.detailList[i].id,
+            imgUrl: getData.detailList[i].imgUrl,
+            title: getData.detailList[i].title,
+            leassonType: getData.detailList[i].leassonType,
+          })
+        }
+      }
+      this.setData({
+        leassonList: arr.reverse()
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  onLoad: function() {
+    console.log(getData)
+    var arr = []
+    for (var i = 0; i < getData.detailList.length; i++) {
+      console.log(getData.detailList[i].leassonType)
+      if (getData.detailList[i].leassonType == 1) {
+        arr.push({
+          id: getData.detailList[i].id,
+          imgUrl: getData.detailList[i].imgUrl,
+          title: getData.detailList[i].title,
+          leassonType: getData.detailList[i].leassonType,
+        })
+      }
+    }
+    this.setData({
+      imgUrls: getData.bannerList,
+      leassonList: arr.reverse()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  //详情页面
+  seeDetail: function(e) {
+    console.log(e)
+    this.setData({
+      leassonId: e.currentTarget.dataset.id
+    })
+    wx.navigateTo({
+      url: '../detail/detail?id=' + this.data.leassonId
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    
+  onShareAppMessage: function() {
+    return {
+      title: '达叔与他的朋友们',
+      path: 'pages/index/index'
+    }
   }
 })

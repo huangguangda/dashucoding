@@ -1,25 +1,15 @@
-<view class='bg'>
-  <view class='head'>
-    <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
-    <open-data type="userNickName" class="nickName"></open-data>
-  </view>
+<view class='head head-height'>
+  <block wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="../../images/icon-mine.png" mode="cover"></image>
+      <text class="userinfo-nickname">微信授权</text>
+    </view>
+    <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </block>
+  <block wx:else>
+    <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </block>
 </view>
-
-<view class="item" bindtap='geren'>
-  <image src="/images/geren.png"></image>
-  <view class="title">
-    个人信息
-  </view>
-  <view class="detail2">
-    <text>></text>
-  </view>
-</view>
-<view class="line"></view>
-<view class="item" bindtap='anquan'>
-  <image src="/images/anquan.png"></image>
-  <view class="title">安全设置</view>
-  <view class="detail2">
-    <text> ></text>
-  </view>
-</view>
-<view class="line"></view>

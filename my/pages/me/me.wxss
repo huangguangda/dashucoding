@@ -1,60 +1,38 @@
-.bg {
-  height: 300rpx;
-  background-color: #ca0c16;
+.head-height {
+  height:300rpx;
 }
 
 .head {
+  background:url('https://upload-images.jianshu.io/upload_images/11158618-3082581eccb40d16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/750/format/webp');
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.login-button {
+  opacity: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: fixed;
 }
 
 .userinfo-avatar {
-  width: 160rpx;
-  height: 160rpx;
+  margin-left:80rpx;
+  border:4rpx solid #fff;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 30rpx;
   border-radius: 50%;
-  overflow: hidden;
-  margin: 20rpx auto;
 }
 
-.nickName {
-  display: flex;
-  color: #fff;
-  font-size: 15px;
-  margin-top: 10rpx;
-  justify-content: center;
-}
-
-/* 下 */
-
-.item {
-  display: flex;
-  flex-direction: row;
-  height: 180rpx;
-}
-
-.item image {
-  width: 80rpx;
-  height: 80rpx;
-  padding-top: 60rpx;
-  padding-left: 20rpx;
-}
-
-.title {
-  padding-top: 70rpx;
-  padding-left: 50rpx;
-  font-size: 40rpx;
-}
-
-.detail2 {
-  font-size: 50rpx;
-  position: absolute;
-  right: 30rpx;
-  height: 100rpx;
-  line-height: 180rpx;
-  color: #888;
-}
-
-.line {
-  border: 2rpx solid #ccc;
-  opacity: 0.2;
+.userinfo-nickname {
+  color: #333;
+  font-size: 42rpx;
 }
