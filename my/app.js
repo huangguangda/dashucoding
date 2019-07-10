@@ -13,6 +13,7 @@ App({
     wx.showLoading({
       title: '加载中',
     })
+    wx.hideLoading()
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId

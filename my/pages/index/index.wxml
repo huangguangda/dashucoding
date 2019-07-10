@@ -1,8 +1,8 @@
 <view class="container">
-  <swiper class="images-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
+  <swiper class="images-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
     <block wx:for="{{imgUrls}}" wx:key='*this'>
       <swiper-item>
-        <image src="{{item}}" class="slide-image" mode="aspectFill" id='{{item.target}}'/>
+        <image src="{{item}}" class="slide-image" id='{{item.target}}'/>
         <view class="sign">{{currentIndex+1}} / {{imgUrls.length}}</view>
       </swiper-item>
     </block>

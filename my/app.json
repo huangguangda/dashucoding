@@ -2,8 +2,20 @@
   "pages": [
     "pages/index/index",
     "pages/detail/detail",
+    "pages/issues/issues",
+    "pages/about/about",
+    "pages/run/run",
+    "pages/movies/movies",
+    "pages/calc/calc",
+    "pages/history/history",
+    "pages/gameone/gameone",
     "pages/me/me"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ca0c16",

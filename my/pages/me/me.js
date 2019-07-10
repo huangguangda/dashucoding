@@ -10,6 +10,31 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  run: function() {
+    wx.navigateTo({
+      url: '/pages/run/run',
+    })
+  },
+  gameone: function () {
+    wx.navigateTo({
+      url: '/pages/gameone/gameone',
+    })
+  },
+  calc: function () {
+    wx.navigateTo({
+      url: '/pages/calc/calc',
+    })
+  },
+  issues: function () {
+    wx.navigateTo({
+      url: '/pages/issues/issues',
+    })
+  },
+  about: function () {
+    wx.navigateTo({
+      url: '/pages/about/about',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

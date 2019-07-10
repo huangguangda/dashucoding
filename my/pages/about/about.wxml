@@ -1,0 +1,51 @@
+<!--about.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="black-cover"></view>
+    <image class="logo" src="/images/more/logo.png"></image>
+    <image class="title" src="/images/timg.png"></image>
+  </view>
+  <view class="content">
+    <view class="version">
+      <view class="version-title">
+        <text class="title-name">达叔与他的朋友们</text>
+        <text class="version-text">{{version}}</text>
+        <text class="version-text">公测</text>
+      </view>
+      <view bindtap="toggleLog">
+        <text class="version-log-link update-log" wx:if="{{!showLog}}">更新日志</text> 
+        <text class="version-log-link" wx:else>简介</text> 
+      </view>
+    </view>
+    <view class="describe" wx:if="{{!showLog}}">
+        <text class="desc-title">简介</text>
+        <view class="desc-list">
+          <text class="desc-list-item">官网：https://www.jianshu.com/u/c785ece603d1</text>
+          <text class="desc-list-item">Github：https://github.com/huangguangda</text>
+        </view>
+        <text class="desc-content">达叔与他的朋友们是一款微信小程序，由达叔小生开发，用于全新的连接用户与服务的方式，无需下载与安装即可在微信内被便捷地获取和传播，同时具有出色的使用体验。</text>
+        <text class="desc-content">在工作中会面临很多突发问题，通常通过各种临时搜索到的方法都能很快解决，但过一段时间再发生同样的问题，往往又要重复一遍寻找答案的过程，无形中浪费了很多时间。</text>
+        <text class="desc-content">把第一次解决问题的过程记录成博客，以后就能节约重复寻找答案的时间。</text>
+        <text class="desc-content">在记录过程和答案的同时也进行着复习，并且可能会产生一些扩散思维，收集到更多相关知识。把博客分享出来，更是对自己所掌握知识的补充，这就是这个博客诞生的原因。</text>
+        <text class="desc-content">达叔与他的朋友们更是/更有... （期待您的发现）</text>
+    </view>
+    <view class="log-list" wx:else>
+      <view class="describe">
+          <view class="desc-title">
+            <text class="desc-v">v1.0.0 内测版</text>
+            <text class="desc-time">2000.4.23</text>
+          </view>
+          <text class="desc-content">记博客会让人变得更精确，更注重细节，更能刨根问底，还能深化记忆。在工作中会面临很多突发问题，通常通过各种临时搜索到的方法都能很快解决，但过一段时间再发生同样的问题，往往又要重复一遍寻找答案的过程，无形中浪费了很多时间。把第一次解决问题的过程记录成博客，以后就能节约重复寻找答案的时间。在记录过程和答案的同时也进行着复习，并且可能会产生一些扩散思维，收集到更多相关知识。把博客分享出来，更是对自己所掌握知识的补充，这就是这个博客诞生的原因。</text>
+          <text class="desc-content">开启内测</text>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="footer-lanshan">
+        <image src="/images/more/lanshan.png"></image>
+        <text>Jeskson</text>
+    </view>
+    <text>达叔小生 · 达叔与他的朋友们官方</text>
+    <text>Copyright @ {{year}} All Rights Reserved</text>
+  </view>
+</view>
