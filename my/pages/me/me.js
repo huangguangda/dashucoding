@@ -15,11 +15,6 @@ Page({
       url: '/pages/run/run',
     })
   },
-  gameone: function () {
-    wx.navigateTo({
-      url: '/pages/gameone/gameone',
-    })
-  },
   calc: function () {
     wx.navigateTo({
       url: '/pages/calc/calc',

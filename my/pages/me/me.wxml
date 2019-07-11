@@ -15,13 +15,6 @@
 </view>
 
 <view class="hr"></view>
-<view class="item" bindtap='gameone'>
-  <view class="title">2048</view>
-  <view class="detail2">
-    <text> ></text>
-  </view>
-</view>
-<view class="line"></view>
 <view class='item' bindtap='run'>
   <view class="title">跑步</view>
   <view class="detail2">
@@ -30,7 +23,7 @@
 </view>
 <view class="line"></view>
 <view class="item" bindtap='calc'>
-  <view class="title">简易计算器</view>
+  <view class="title">工具</view>
   <view class="detail2">
     <text> ></text>
   </view>

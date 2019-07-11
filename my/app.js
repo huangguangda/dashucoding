@@ -97,7 +97,6 @@ App({
 
   },
   globalData: {
-    userInfo: null,
-    doubanBase: "http://t.yushu.im"
+    userInfo: null
   }
 })

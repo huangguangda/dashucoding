@@ -5,10 +5,8 @@
     "pages/issues/issues",
     "pages/about/about",
     "pages/run/run",
-    "pages/movies/movies",
     "pages/calc/calc",
     "pages/history/history",
-    "pages/gameone/gameone",
     "pages/me/me"
   ],
   "permission": {

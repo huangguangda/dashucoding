@@ -3,12 +3,12 @@
 var app = getApp();
 Page({
   data: {
-    version: '',
+    year: '',
     showLog: false
   },
   onLoad: function () {
+    console.log('about->', app)
     this.setData({
-      version: app.version,
       year: new Date().getFullYear()
     });
   },

@@ -171,7 +171,7 @@
   color: #c2c2c2;
 }
 
-.footer-lanshan {
+.footer-dashu {
   font-size: 10pt;
   height: 10pt;
   line-height: 10pt;
@@ -181,7 +181,7 @@
   margin-bottom: 8rpx;
 }
 
-.footer-lanshan image {
+.footer-dashu image {
   width: 10pt;
   height: 10pt;
   margin-right: 5rpx;

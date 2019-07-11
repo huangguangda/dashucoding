@@ -9,7 +9,6 @@
     <view class="version">
       <view class="version-title">
         <text class="title-name">达叔与他的朋友们</text>
-        <text class="version-text">{{version}}</text>
         <text class="version-text">公测</text>
       </view>
       <view bindtap="toggleLog">
@@ -41,8 +40,8 @@
     </view>
   </view>
   <view class="footer">
-    <view class="footer-lanshan">
-        <image src="/images/more/lanshan.png"></image>
+    <view class="footer-dashu">
+        <image src="/images/dashu.png"></image>
         <text>Jeskson</text>
     </view>
     <text>达叔小生 · 达叔与他的朋友们官方</text>
