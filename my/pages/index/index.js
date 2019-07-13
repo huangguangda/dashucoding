@@ -18,7 +18,6 @@ Page({
     currentIndex: 0,
   },
   bindchange: function (e) {
-    console.log('轮播图',e.detail)
     this.setData({
       currentIndex: e.detail.current
     })

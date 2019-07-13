@@ -55,7 +55,31 @@ Page({
   },
 
   getUserInfo: function(e) {
+    console.log("me-> " + e.detail.errMsg)
+    console.log("me-> " + e.detail.userInfo)
+    console.log("me-> " + e.detail.rawData)
+    wx.login({
+      success: function(res) {
+        console.log(res)
+        // 获取登录的临时凭证
+        var code = res.code;
+         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+         // 调用后端，获取微信的session_key, secret
+         wx.request({
+           url: '' + code,
+           method: "POST",
+           success: function(result) {
+             console.log(result);
+             // 保存用户信息到本地缓存，可以用作小程序端的拦截器
+             app.setGlobalUserInfo(e.detail.userInfo);
+             
+           }
+         })
+      }
+    })
+
     this.setUserInfo(e.detail.userInfo);
+
   },
 
   setUserInfo: function(userInfo) {
