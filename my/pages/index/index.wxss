@@ -95,3 +95,12 @@
   font-size: 14px;
   color: #595959;
 }
+
+.btn {
+  width: 700rpx;
+  position: fixed;
+  bottom: 15rpx;
+  color: white;
+  margin-left: 25rpx;
+  background-color: #ff6004;
+}

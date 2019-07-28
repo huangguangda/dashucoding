@@ -1,0 +1,83 @@
+<view class="search-wrapper">
+  <view class="search-panel">
+    <view class="search-section">
+      <view class="search-button-wrapper">
+        <image class="search-button" src="/images/scan.png" bindtap="scan"></image>
+      </view>
+      <view class="search-input-wrapper ">
+        <input bindinput="bindBarcodeInput" bindconfirm="query" bindfocus="bindBarcodeFocus" bindblur="bindBarcodeBlur" class="search-input" placeholder="查找楼盘" value="{{barcode}}" confirm-type="search" />
+      </view>
+      <view class="search-button-wrapper">
+        <image class="search-button" src="/images/search.png" bindtap="query"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="search">
+  <view class="search-box flex-h flex-cc" bindtap='toSearch'>
+    <image src="/images/search.png" class="icon-44" />
+    <view type="text" class="flex-1 input-box">搜索商品</view>
+  </view>
+</view> -->
+
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" circles='{{circles}}' scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange"
+  show-location include-points='{{markers}}' style="width: 100%; height: 600px;"></map>
+
+<view class='pupContent {{click? "showContent": "hideContent"}} {{option? "open": "close"}}' hover-stop-propagation='true'>
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">租</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">售</view>
+    <!-- <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">更多</view> -->
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+      <view style='display: flex; flex-direction: row; width: 100%;'>
+        <view style='margin: 15rpx;'>
+          <image src="/images/timg.png" style='width: 200rpx; height: 200rpx; border: 1rpx solid #ff0; border-radius: 15rpx;'></image>
+        </view>
+
+        <view style='display:flex; flex-direction: column;margin: 15rpx; width: 65%; font-size: 30rpx;'>
+          <view style='margin-right: 15rpx; font-size: 35rpx; color: #994d00; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;'>业主在网上浪费了时代峻峰了dsfasfwefadsfs</view>
+
+          <view style="display:flex; flex-direction: row; margin: 10rpx 0 10rpx 0;">
+            <view>星河盛世花园</view>
+            <view style='margin-left: 160rpx;'>高层/22层</view>
+          </view>
+
+          <view style='both: clean; margin: 10rpx 0 10rpx 0; display: flex; flex-direction: row;'>
+            <view>3是2层 99瓶 难</view>
+            <view style='color: red; margin-left: 130rpx; margin-top: 10rpx;'>3000元/月</view>
+          </view>
+
+          <view style='display:flex; flex-direction: row;'>
+            <text style='border: 0px solid, pick;width: 100rpx; height: 50rpx; line-height: 50rpx; background-color: #fff4db;font-size: 20rpx; border-radius: 15rpx;text-align: center;color: #d0a84d;'>精装修</text>
+            <text style='border: 0px solid, pick;width: 100rpx; height: 50rpx; line-height: 50rpx; background-color:#fff3eb;font-size: 20rpx; border-radius: 15rpx;text-align: center;margin-left: 15rpx;color: #feb46f;c'>地铁房</text>
+            <text style='border: 0px solid, pick;width: 100rpx; height: 50rpx; line-height: 50rpx; background-color: #fff0ec;font-size: 20rpx; border-radius: 15rpx;text-align: center; margin-left: 15rpx;color: #f39594;'>生活便利</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view style="border: 1px solid #ccc; opactiy: 0.3;"></view>
+    </swiper-item>
+
+    <swiper-item>
+      <view>
+        2
+      </view>
+    </swiper-item>
+    <!-- 
+  <swiper-item>
+    <view>
+     3
+    </view>
+  </swiper-item> -->
+
+  </swiper>
+
+
+</view>
+
+<view class='pupContentBG {{click?"showBG":"hideBG"}} {{option?"openBG":"closeBG"}}' catchtap='clickPup'> </view>

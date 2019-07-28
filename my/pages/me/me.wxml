@@ -35,6 +35,13 @@
     <text> ></text>
   </view>
 </view>
+<view class="line"></view>
+<view class="item" bindtap='view'>
+  <view class="title">面试</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
 <view class="hr"></view>
 
 <button class="kf_button" open-type="contact" session-from="weapp" size="20" type="default-light">

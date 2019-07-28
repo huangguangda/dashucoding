@@ -10,19 +10,82 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function() {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.showLoading({
-      title: '加载中',
-    })
-    wx.hideLoading()
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log("app.js->", res.code, res)
+        const code = res.code
+        const ghId = 'gh_2dc66d31473a'
+        wx.request({
+          url: 'https://hundunxcx.com:808/xcx/strategy/isCheck',
+          data: {
+            ghId: ghId,
+            code: code
+          },
+          method: 'POST',
+          success(res) {
+            console.log('isCheck->', res)
+            // if(res.data.data == 2) {
+            //   wx.navigateTo({
+            //     url: '/pages/allgame/allgame',
+            //   })
+
+            // }
+            wx.setStorage({
+              key: 'data',
+              data: res.data.data,
+            })
+            wx.request({
+              url: 'https://hundunxcx.com:808/xcx/count/add',
+              data: {
+                ghId: ghId,
+                code: code
+              },
+              method: 'POST',
+              success(res) {
+                const openId = res.data.data.openId
+                console.log('openId->', res.data.data.openId)
+                wx.setStorage({
+                  key: 'openId',
+                  data: openId,
+                })
+
+                wx.request({
+                  url: 'https://hundunxcx.com:808/v3/xcx/jump/get/all',
+                  data: {
+                    ghId: ghId,
+                    openId: openId
+                  },
+                  method: 'POST',
+                  success(res) {
+                    console.log(res.data.data.xcxList)
+                    wx.setStorage({
+                      key: 'xcxList',
+                      data: res.data.data.xcxList,
+                    })
+                    var data = res.data.data.xcxList[0].lists[0]
+                    wx.setStorage({
+                      key: 'jumpAppId',
+                      data: data.jumpAppId,
+                    })
+                    wx.setStorage({
+                      key: 'jumpUrl',
+                      data: data.jumpUrl,
+                    })
+                    wx.setStorage({
+                      key: 'jumpId',
+                      data: data.jumpId,
+                    })
+
+                  }
+                })
+
+                console.log(res.data)
+              }
+            })
+
+            console.log(res.data)
+          }
+        })
         wx.hideLoading()
       }
     })
@@ -49,14 +112,14 @@ App({
     // 获取小程序更新机制兼容
     if (wx.canIUse('getUpdateManager')) {
       const updateManager = wx.getUpdateManager()
-      updateManager.onCheckForUpdate(function(res) {
+      updateManager.onCheckForUpdate(function (res) {
         // 请求完新版本信息的回调
         if (res.hasUpdate) {
-          updateManager.onUpdateReady(function() {
+          updateManager.onUpdateReady(function () {
             wx.showModal({
               title: '更新提示',
               content: '新版本已经准备好，是否重启应用？',
-              success: function(res) {
+              success: function (res) {
                 if (res.confirm) {
                   // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
                   updateManager.applyUpdate()
@@ -64,7 +127,7 @@ App({
               }
             })
           })
-          updateManager.onUpdateFailed(function() {
+          updateManager.onUpdateFailed(function () {
             // 新的版本下载失败
             wx.showModal({
               title: '已经有新版本了哟~',

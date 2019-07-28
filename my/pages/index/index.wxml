@@ -30,6 +30,8 @@
           </view>
         </view>
       </view>
+      <button class="btn" bindtap="gomine">立即游戏</button>
     </view>
   </scroll-view>
 </view>
+

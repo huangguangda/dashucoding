@@ -1,0 +1,229 @@
+.search-wrapper {
+  position: fixed;/*悬停搜索框的关键样式*/
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+ 
+.search-panel {
+  background-color: #f50;
+}
+ 
+.search-section {
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: row;
+}
+ 
+.search-demo {
+  padding: 5px;
+  flex-direction: row;
+  background-color: #eee;
+  padding-left:42px;   
+  align-items: flex-start;
+}
+ 
+.search-input-wrapper {
+  flex: 8;
+  padding: 5px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+ 
+.search-input {
+  padding-top: 5px;
+}
+ 
+.search-clear {
+  float: right;
+  width: 32px;
+  height: 32px;
+  z-index: 998;
+}
+ 
+.search-button-wrapper {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top:5px; 
+}
+ 
+.search-button {
+  flex: 1;
+  border: none !important;
+  color: white !important;
+  width: 32px;
+  height: 32px;
+}
+
+
+
+.search {
+  height: 110rpx;
+}
+
+.search .search-box {
+  height: 80rpx;
+  padding-left: 30rpx;
+  margin-top: 30rpx;
+  border-radius: 40rpx;
+  background: rgb(250, 250, 250);
+}
+
+.search .search-box .input-box {
+  color: #ccc;
+  height: 40rpx;
+  margin-left: 23rpx;
+  font-size: 28rpx;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
+
+.flex-h {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-cc {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-44 {
+  height: 44rpx;
+  width: 44rpx;
+}
+
+.swiper-tab {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #797979;
+}
+
+.on {
+  color: #ca0c16;
+  border-bottom: 5rpx solid #ca0c16;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pupContentBG {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.pupContent {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 0 10rpx #333;
+  height: 0;
+  z-index: 999;
+}
+
+/* 设置显示的背景 */
+
+.showBG {
+  display: block;
+}
+
+.hideBG {
+  display: none;
+}
+
+/* 弹出或关闭动画来动态设置内容高度 */
+
+@keyframes slideBGtUp {
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes slideBGDown {
+  from {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  to {
+    background: transparent;
+  }
+}
+
+/* 显示或关闭内容时动画 */
+
+.openBG {
+  animation: slideBGtUp 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+
+.closeBG {
+  animation: slideBGDown 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+
+/* 设置显示内容 */
+
+.showContent {
+  display: block;
+}
+
+.hideContent {
+  display: none;
+}
+
+/* 弹出或关闭动画来动态设置内容高度 */
+
+@keyframes slideContentUp {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 800rpx;
+  }
+}
+
+@keyframes slideContentDown {
+  from {
+    height: 800rpx;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+/* 显示或关闭内容时动画 */
+
+.open {
+  animation: slideContentUp 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+
+.close {
+  animation: slideContentDown 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
